@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
               <path d="M 65 25 L 68 28 L 75 21" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg> */}
 
-            InterviewCrack.com
+            InterviewCrack
           </h1>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
             <div className="flex items-center gap-2 w-full sm:w-auto">
