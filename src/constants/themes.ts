@@ -14,7 +14,4 @@ export function applyTheme(key: ThemeKey) {
   document.documentElement.style.setProperty('--lime', palette.primary);
   document.documentElement.style.setProperty('--line', palette.ink + '26');
 }
-export const PLACEHOLDER_TEXT = `• Programming: JavaScript Arrays, React Hooks, Python OOP, C# LINQ
-• Competitive Exams: JEE Physics, NEET Biology, UPSC History, GATE CS
-• KBC/Quiz: KBC Indian History, KBC Science Hindi, KBC Sports Hinglish
-• Any Subject: Data Structures, World Geography, Indian Constitution...`;
+export const PLACEHOLDER_TEXT = "What would you like to practise? For example: RAG pipelines, agentic AI, Python, or moving from full-stack to AI. Add your experience level or paste study notes.";

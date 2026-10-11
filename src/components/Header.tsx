@@ -21,6 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
           <h1 className={`text-xl sm:text-2xl md:text-3xl font-bold ${theme.text} flex items-center gap-2 break-words`}>
+           <a href="../" aria-label="InterviewCrack home" className="flex items-center gap-2">
            <img src={logo} alt="InterviewCrack Logo" className="logo"></img>
             {/* <svg className="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{ width: '32px', height: '32px', minWidth: '32px' }}>
               <rect x="42" y="65" width="16" height="15" fill="#667eea" rx="2" />
@@ -35,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
               <path d="M 65 25 L 68 28 L 75 21" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg> */}
 
-            InterviewCrack
+            InterviewCrack</a>
           </h1>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
             <div className="flex items-center gap-2 w-full sm:w-auto">

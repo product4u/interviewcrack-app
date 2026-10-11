@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { PracticeDisclaimer } from './components/PracticeDisclaimer';
 import { Copy, Play, RotateCcw, Trophy, Target, Loader, ChevronLeft, ChevronRight } from 'lucide-react';
 import useSpeechToText from 'react-hook-speech-to-text';
 
@@ -43,7 +44,8 @@ const QuizApp: React.FC = () => {
   const { quizSessions, setQuizSessions, addSession } = useQuizSessions();
   const { isGeneratingWithAI, aiGenerationProgress, generateWithAI } = useAIGeneration();  const { startVideoInterview, saveInterview, error: recordingStorageError } = useVideoInterview();
   // ============ Local State ============
-  const [currentView, setCurrentView] = useState<ViewType>('home');
+  const [currentView, setCurrentView] = useState<ViewType>(() => new URLSearchParams(window.location.search).has('practice') ? 'video-interview' : 'home');
+  const [showDisclaimer, setShowDisclaimer] = useState(() => new URLSearchParams(window.location.search).has('practice'));
   const [topic, setTopic] = useState<string>('');
   const [questionCount, setQuestionCount] = useState<number>(6);
   const [generatedPrompt, setGeneratedPrompt] = useState<string>('');
@@ -61,12 +63,12 @@ const QuizApp: React.FC = () => {
   const [quizQuestionIndex, setQuizQuestionIndex] = useState<number>(0);
 
   const openPreview = useCallback(() => {
-                setTopic('Interview room preview');
+    setShowDisclaimer(true);
+
                 setVideoSubjectLine('Interview room preview');
-                setVideoContext('Demo session with sample questions');
+                setVideoContext('Demo session with one sample question');
                 setVideoQuestions([
                   { id: 'room-preview-1', question: 'Tell me about a challenging project you worked on. How did you approach it?', shortAnswer: 'Describe the situation, your responsibility, the actions you took, and the result.', expectedAnswer: 'Use a specific example. Explain the challenge, your own contribution, the trade-offs you considered, and the outcome. Reflect on what you learned.', keyWords: ['challenge', 'actions', 'result'], buddyHint: 'Think of one project you remember well. What made it difficult, and what did you personally do?', buddyExplanation: 'Hey, treat it like telling me a story. Set the scene, explain your part, then describe what you did and how it turned out. A small, honest example is stronger than a big, vague one.' },
-                  { id: 'room-preview-2', question: 'When would you choose an array over a linked list?', shortAnswer: 'Arrays offer constant-time indexed access and good memory locality. Linked lists allow constant-time insertion at a known node, but accessing an arbitrary element takes linear time.', expectedAnswer: 'Choose an array for frequent indexed reads and compact storage. A linked list can help when inserting or removing nodes at known positions; finding those positions still takes time. Inserting into the middle of an array generally requires shifting elements.', keyWords: ['indexed', 'access', 'locality', 'insertion'], buddyHint: 'Imagine numbered seats versus a treasure hunt where each clue points to the next one.', buddyExplanation: 'An array is like a row of numbered seats: you can go straight to seat 7. A linked list is a chain of clues: you follow them one at a time. Changing links is cheap when you already have the node, but finding it can take time. Explain which operations your application does most often.' }
                 ]);
                 setVideoInterviewMode('audio');
     setCurrentView('video-interview');
@@ -265,6 +267,7 @@ const QuizApp: React.FC = () => {
   }, [resetQuiz]);
 
   const handleVideoInterviewStart = useCallback(() => {
+    setShowDisclaimer(true);
     setTopic('');
     setQuestionCount(2);
     setVideoInterviewMode(null);
@@ -649,6 +652,7 @@ const QuizApp: React.FC = () => {
   // ============ JSX Render ============
   return (
     <div className={`min-h-screen ${currentThemeObj.bg} transition-all duration-500`}>
+      {showDisclaimer && <PracticeDisclaimer onClose={() => setShowDisclaimer(false)} />}
       {/* Header */}
       <Header
         currentTheme={currentTheme}
@@ -712,9 +716,9 @@ const QuizApp: React.FC = () => {
             <div className="space-y-6">
               <div>
                 <label className={`block text-sm font-medium ${currentThemeObj.text} mb-2`}>
-                  Topic or Content or Link
+                  Interview topic or study notes
                 </label>
-                <textarea
+                <textarea aria-label="Interview topic or study notes"
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder={PLACEHOLDER_TEXT}
@@ -1182,7 +1186,7 @@ const QuizApp: React.FC = () => {
             <h2 className={`text-3xl font-bold ${currentThemeObj.text} mb-6`}>Prepare your interview room</h2>
             <p className="text-sm mb-4">AI-generated questions and reference answers may be incorrect or outdated. Check facts before using them to study.</p>
             <div className={`mb-6 p-4 rounded-xl border ${currentThemeObj.bg}`}>
-              <p className={`text-sm mb-3 ${currentThemeObj.text}`}>Step inside, meet your interviewer, and choose your voices. Preview with two sample questions before generating your own.</p>
+              <p className={`text-sm mb-3 ${currentThemeObj.text}`}>Step inside, meet your interviewer, and choose your voices. Preview with one sample question before generating your own.</p>
               <button className={`${currentThemeObj.primary} text-white px-4 py-2 rounded-lg font-semibold text-sm`} onClick={() => {
                 openPreview();
               }}>Preview 3D room · no API key needed</button>
@@ -1206,9 +1210,9 @@ const QuizApp: React.FC = () => {
             <div className="space-y-6 mt-6">
               <div>
                 <label className={`block text-sm font-medium ${currentThemeObj.text} mb-2`}>
-                  Topic or Content or Link
+                  Interview topic or study notes
                 </label>
-                <textarea
+                <textarea aria-label="Interview topic or study notes"
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder={PLACEHOLDER_TEXT}
@@ -1317,6 +1321,7 @@ const QuizApp: React.FC = () => {
             onComplete={handleVideoInterviewComplete}
             onBack={() => {
               setVideoInterviewMode(null);
+              setVideoQuestions([]);
               setCurrentView('video-interview');
             }}
           />
