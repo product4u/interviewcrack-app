@@ -1,0 +1,109 @@
+{
+  "themes": {
+    "home": {
+      "name": "Daylight",
+      "bg": "#f5f3ec",
+      "panel": "#ffffff",
+      "ink": "#20352d",
+      "muted": "#59695f",
+      "primary": "#294c3b",
+      "soft": "#e9eedf"
+    },
+    "apple": {
+      "name": "Apple",
+      "bg": "#f3f4f6",
+      "panel": "#ffffff",
+      "ink": "#172033",
+      "muted": "#526174",
+      "primary": "#245abe",
+      "soft": "#e9eff9"
+    },
+    "royal": {
+      "name": "Royal",
+      "bg": "#f6f0fc",
+      "panel": "#ffffff",
+      "ink": "#30203d",
+      "muted": "#695579",
+      "primary": "#713b98",
+      "soft": "#eee2f7"
+    },
+    "classic": {
+      "name": "Classic",
+      "bg": "#eff3fb",
+      "panel": "#ffffff",
+      "ink": "#20304d",
+      "muted": "#52627d",
+      "primary": "#315fa4",
+      "soft": "#e2eaf7"
+    },
+    "blackWhiteLight": {
+      "name": "Black & White Light",
+      "bg": "#ffffff",
+      "panel": "#fafafa",
+      "ink": "#171717",
+      "muted": "#555555",
+      "primary": "#242424",
+      "soft": "#eeeeee"
+    },
+    "nature": {
+      "name": "Nature",
+      "bg": "#eff6ef",
+      "panel": "#ffffff",
+      "ink": "#203d2d",
+      "muted": "#516b59",
+      "primary": "#296340",
+      "soft": "#e0eddf"
+    },
+    "fire": {
+      "name": "Fire",
+      "bg": "#fff3eb",
+      "panel": "#ffffff",
+      "ink": "#48271f",
+      "muted": "#805b4e",
+      "primary": "#a23c1b",
+      "soft": "#fae3d7"
+    },
+    "sunset": {
+      "name": "Sunset",
+      "bg": "#fff2ef",
+      "panel": "#ffffff",
+      "ink": "#452725",
+      "muted": "#805c59",
+      "primary": "#a63e36",
+      "soft": "#f8dfd9"
+    },
+    "ocean": {
+      "name": "Ocean",
+      "bg": "#edf6fa",
+      "panel": "#ffffff",
+      "ink": "#173b48",
+      "muted": "#486b78",
+      "primary": "#176581",
+      "soft": "#dcecf3"
+    },
+    "glassmorphism": {
+      "name": "Glassmorphism",
+      "bg": "#f2effb",
+      "panel": "#ffffffdd",
+      "ink": "#302647",
+      "muted": "#65597e",
+      "primary": "#634390",
+      "soft": "#e8e0f4"
+    }
+  },
+  "benefits": [
+    {
+      "title": "Say it out loud.",
+      "body": "Audio or video. Your pace. Your next attempt."
+    },
+    {
+      "title": "A little help goes a long way.",
+      "body": "Ask Sam for a hint, an explanation, or help finding your words."
+    },
+    {
+      "title": "Make the next answer yours.",
+      "body": "Review your session. Return to saved practice on this browser and device."
+    }
+  ],
+  "keyTrust": "Choose persistent or tab-session key storage. Google receives your Gemini key and prompt when you generate questions. Remove just the key in the app without deleting history. Provider charges or limits may apply."
+}

@@ -1,0 +1,31 @@
+/* Shared layout colors; palette values come from experience.json. */
+:root { color-scheme:light; }
+body { background:var(--bg); color:var(--ink); font-family:'Segoe UI',system-ui,sans-serif; }
+.ic-bg { background:var(--bg); color:var(--ink); }
+.ic-card { background:var(--panel); color:var(--ink); border-color:var(--line); }
+.ic-primary { background:var(--primary); color:white; border-radius:12px; }
+.ic-secondary { background:var(--primary); color:white; border-radius:12px; }
+.ic-primary:hover,.ic-secondary:hover { filter:brightness(.9); }
+.ic-text { color:var(--ink); text-shadow:none; }
+.ic-accent { color:var(--primary); }
+button:disabled { opacity:.5; cursor:not-allowed; }
+input,select,textarea { background:var(--panel); color:var(--ink); border-color:var(--line); }
+.ic-bg h1,.ic-bg h2 { font-family:Georgia,'Times New Roman',serif; letter-spacing:-.035em; }
+.ic-bg [class*="bg-blue-50"],.ic-bg [class*="bg-gray-100"],.ic-bg [class*="bg-yellow-50"],.ic-bg [class*="bg-green-50"] { background:var(--soft); color:var(--ink); }
+.site-header select { padding:8px; border:1px solid var(--line); border-radius:12px; max-width:150px; }
+body .benefit,body .closing,body .practice-trust,body .feature,body .question-examples { background:var(--soft); border-color:var(--line); color:var(--ink); }
+body .nav-cta { background:var(--panel); border-color:var(--line); }
+body .button.primary,body .cta-button { background:var(--primary); color:white; }
+body .experience .primary { background:#d8eea3; color:#203023; }
+body .container { background:var(--panel); color:var(--ink); }
+body .container h1,body .container h2,body .container h3,body .container a:not(.cta-button) { color:var(--primary); }
+/* The 3D stage keeps its own lighting; its surrounding controls follow the page palette. */
+.ic-bg .world-topbar,.ic-bg .world-dialogue,.ic-bg .world-controls,.ic-bg .world-settings { background:var(--panel); color:var(--ink); }
+.ic-bg .world-topbar *, .ic-bg .world-dialogue-label *, .ic-bg .world-narrative,.ic-bg .world-presence { color:var(--muted); }
+.ic-bg .world-controls button { color:var(--ink); border-color:var(--line); background:var(--soft); }
+.ic-bg .virtual-world { background:var(--panel); color:var(--ink); border-color:var(--line); }
+.ic-bg .world-stage { color:#eff1dd; }
+@media(max-width:650px) { .site-header { flex-wrap:wrap; padding-bottom:12px; } .site-header nav { flex-wrap:wrap; gap:12px; } }
+
+.ic-border-accent { border-color:var(--primary); }
+.ic-soft { background:var(--soft); color:var(--ink); }

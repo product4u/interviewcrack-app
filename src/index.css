@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+.logo { width: 60px; height: 60px; }
+/* Shared practice story treatment, while retaining user-selected themes. */
+.practice-story { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #94a3b840; }
+.practice-story article { transition: transform .2s ease; }
+.practice-story article:hover { transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce) { .practice-story article { transition: none; } .practice-story article:hover { transform: none; } }
