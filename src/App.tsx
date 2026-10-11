@@ -1313,7 +1313,7 @@ const QuizApp: React.FC = () => {
         {currentView === 'video-interview' && videoInterviewMode !== null && videoQuestions.length > 0 && (
           <VideoInterviewView
             theme={currentThemeObj}
-            topic={topic}
+            topic={topic || videoSubjectLine}
             subjectLine={videoSubjectLine}
             context={videoContext}
             interviewMode={videoInterviewMode}
