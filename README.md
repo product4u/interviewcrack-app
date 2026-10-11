@@ -1,6 +1,6 @@
 # InterviewCrack
 
-Free, open-source interview practice, created by Sameer ([@product4u](https://github.com/product4u)). Explore a virtual interview room, practise answers, and learn how a browser-based React application works.
+Free, open-source interview practice, created by Sameer Bahad (https://www.linkedin.com/in/sameerbahad/) ([@product4u](https://github.com/product4u)). Explore a virtual interview room, practise answers, and learn how a browser-based React application works.
 
 **[Open the website](https://product4u.github.io/interviewcrack-app/)** · **[Try the sample interview](https://product4u.github.io/interviewcrack-app/app/?preview=1)**
 
