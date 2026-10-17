@@ -1,7 +1,7 @@
 {
   "name": "interviewcrack-app",
   "version": "0.1.0",
-  "homepage": "https://product4u.github.io/interviewcrack-app/app",
+  "homepage": "/app",
   "private": true,
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
@@ -30,7 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:landing": "node scripts/build-landing.cjs",
-    "build:pages": "npm run build && node scripts/package-pages.cjs"
+    "build:pages": "npm run build && node scripts/package-pages.cjs && npm run check:seo",
+    "check:seo": "node scripts/check-seo.cjs"
   },
   "eslintConfig": {
     "extends": [

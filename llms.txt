@@ -1,0 +1,16 @@
+# InterviewCrack
+
+> InterviewCrack is a browser-based interview practice app with a virtual interview room, quizzes, audio practice, and video practice. No account or InterviewCrack subscription is required. Generating questions requires your own Gemini API key; provider charges or limits may apply. You can also import prepared questions.
+
+## Public pages
+- [Home](https://interviewcrack.com/): Features, costs, and privacy details.
+- [Practice guides](https://interviewcrack.com/guides/): Interview preparation resources.
+- [Mock interview at home](https://interviewcrack.com/guides/mock-interview-at-home.html): A repeatable practice session and review checklist.
+- [React interview questions](https://interviewcrack.com/guides/react-interview-questions.html): Questions, explanations, and follow-up exercises.
+- [STAR interview answers](https://interviewcrack.com/guides/star-interview-answers.html): A worked example and a planning worksheet.
+- [Practice app](https://interviewcrack.com/app/): Interactive practice; JavaScript required.
+
+## Data and limitations
+Practice history is stored in the same browser and device. Export results and recordings separately for a backup. Gemini receives the key and prompt during generation. Browser speech services may process audio online. The landing preview does not record visitors. Practice does not guarantee interview outcomes.
+
+This optional discovery file does not replace the website, robots.txt, or sitemap and does not grant special ranking or citation eligibility.

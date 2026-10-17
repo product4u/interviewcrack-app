@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Search crawlers are welcome. Training preferences can be set separately.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+Sitemap: https://interviewcrack.com/sitemap.xml
