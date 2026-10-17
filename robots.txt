@@ -1,3 +1,5 @@
+# For project hosting, these rules take effect only at https://product4u.github.io/robots.txt.
+# The copy under /interviewcrack-app/ is a template for the host-root site.
 User-agent: *
 Allow: /
 
@@ -11,4 +13,4 @@ Allow: /
 User-agent: Claude-User
 Allow: /
 
-Sitemap: https://interviewcrack.com/sitemap.xml
+Sitemap: https://product4u.github.io/interviewcrack-app/sitemap.xml
